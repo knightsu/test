@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        .center {
+            text-align: center;
+            border: 3px solid green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./info.html">Info</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+    <li style="float:right"><a href="./register.html">Register</a></li>
+    <li style="float:right"><a class="activate" href="./login.html">login</a></li>
+</ul>
+<br><br><br><br><br><br><br>
+
+<div class="container">
+    <form>
+        <label for="femail">Email:</label><br>
+        <input type="text" id="femail" name="femail"><br>
+        <label for="pw">password:</label><br>
+        <input type="text" id="pw" name="pw"><br>
+        <br>
+        <br><br><br><br>
+        <button onclick="login()">login</button>
+    </form>
+
+    <span id="msg"></span>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

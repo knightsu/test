@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        .center {
+            text-align: center;
+
+        }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 50px;
+            font-family: cursive;
+        }
+        #grad1 {
+            height: 900px;
+            background-color: #1fc8db; /* For browsers that do not support gradients */
+            background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%)
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+            font-size: medium;
+            font-family: cursive;
+        }
+        tr:nth-child(odd) {
+            background-color: aqua;
+            font-size: medium;
+            font-family: "Fira Code Light";
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body onload="getChef()">
+<ul>
+    <li><a class="activate" href="#home">Home</a></li>
+    <li><a href="./info.html">Info</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+    <li style="float:right"><a href="./register.html">Register</a></li>
+    <li style="float:right"><a href="./login.html">login</a></li>
+</ul>
+<div id="grad1">
+<div class="container">
+    <p style="font-size: 40px; font-family: 'Times New Roman'; font-weight: bold" class="center" >party with us</p>
+    <p style="font-size: 40px; font-family: 'Times New Roman'; font-weight: bold" class="center" >our team</p>
+    <table id="chefs">
+
+    </table>
+</div>
+
+
+<div class="container">
+    <p style="font-size: xx-large; font-family: 'Times New Roman'; font-weight: bold" class="center" >service locations</p>
+</div>
+
+
+<div>
+    <table class="center">
+
+        <tr><td>Austin</td></tr>
+
+
+        <tr ><td>Dallas</td></tr>
+
+
+        <tr ><td>Houston</td></tr>
+
+    </table>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

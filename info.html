@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>info</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+            font-size: medium;
+            font-family: cursive;
+        }
+        tr:nth-child(odd) {
+            background-color: aqua;
+            font-size: medium;
+            font-family: "Fira Code Light";
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        img {
+            vertical-align: middle;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body onload="getParty()">
+<ul>
+    <li><a  href="./index.html">Home</a></li>
+    <li><a class="activate" href="./info.html">Info</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+    <li style="float:right"><a href="./register.html">Register</a></li>
+    <li style="float:right"><a href="./login.html">login</a></li>
+</ul>
+<br>
+<br><br>
+<table id="party">
+    <!--
+    <tr>
+        <th style="font-family: 'Times New Roman'; font-size: x-large">what we offer</th>
+        <th style="font-family: 'Times New Roman'; font-size: x-large">suggest party size</th>
+        <th style="font-family: 'Times New Roman'; font-size: x-large">min cost</th>
+    </tr>
+    <tr>
+        <td>birthday party</td>
+        <td>6</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>wedding party</td>
+        <td>20</td>
+        <td>1000</td>
+    </tr>
+    <tr>
+        <td>hibachi party</td>
+        <td>8</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>promotion party</td>
+        <td>10</td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>home warmer party</td>
+        <td>20</td>
+        <td>1000</td>
+    </tr>
+    <tr>
+        <td>baby shower party</td>
+        <td>7</td>
+        <td>200</td>
+    </tr>
+    -->
+</table>
+
+<br>
+<br>
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="img1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="img2.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="img3.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="img4.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="img5.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="img6.jpeg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="img1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="hibachi">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="baby shower">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="wedding">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="promotion">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="home warmer">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img6.jpeg" style="width:100%" onclick="currentSlide(6)" alt="birthday">
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

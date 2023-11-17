@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        .center {
+            text-align: center;
+            border: 3px solid green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./info.html">Info</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+    <li style="float:right"><a class="activate" href="./register.html">Register</a></li>
+    <li style="float:right"><a href="./login.html">login</a></li>
+</ul>
+<br><br><br><br><br><br><br>
+
+<div class="container">
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"> <br>
+        <label for="femail">Email:</label><br>
+        <input type="text" id="femail" name="femail"><br>
+        <label for="pw">password:</label><br>
+        <input type="text" id="pw" name="pw"><br>
+        <label for="rpw">repeat password:</label><br>
+        <input type="text" id="rpw" name="pw" required onkeyup="valpw()"><br>
+        <span id='message'></span><br>
+        <label for="addressline">addressline:</label><br>
+        <input type="text" id="addressline" name="addressline"><br>
+        <label for="city">city:</label><br>
+        <input type="text" id="city" name="city"><br>
+        <label for="state">state:</label><br>
+        <input type="text" id="state" name="state"><br>
+        <br>
+        <br><br><br><br>
+        <button onclick="register()">register</button>
+    </form>
+</div>
+<script src="regis.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contract</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        .center {
+            text-align: center;
+            border: 3px solid green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./info.html">Info</a></li>
+    <li><a class="activate" href="./contact.html">Contact</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+    <li style="float:right"><a href="./register.html">Register</a></li>
+    <li style="float:right"><a href="./login.html">login</a></li>
+</ul>
+<br><br><br>
+<div class="container">
+    <p style="font-size: x-large; font-family: 'Times New Roman'; font-weight: bold" class="center" >please fill below info we will contact you</p>
+</div>
+<br><br><br>
+<br><br><br>
+<div class="container">
+    <form>
+        <label for="partydate">Date</label><br>
+        <input type="text" id="partydate" name="partydate" placeholder="yyyy-mm-dd"><br>
+        <label for="psize">size:</label><br>
+        <input type="text" id="psize" name="psize"><br>
+        <label for="pcon">contact:</label><br>
+        <input type="text" id="pcon" name="pcon"><br>
+        <label for="ftype">Party type:</label><br>
+        <select name="ftype" id="ftype">
+            <option value="birthday">Birthday</option>
+            <option value="promotion">Promotion</option>
+            <option value="home warmer">Home Warmer</option>
+            <option value="baby shower">Baby Shower</option>
+            <option value="wedding">Wedding</option>
+            <option value="hibachi">Hibachi</option>
+        </select><br><br><br><br>
+        <button onclick="placeorder()">Submit</button>
+    </form>
+    <span id="idreq"></span>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
